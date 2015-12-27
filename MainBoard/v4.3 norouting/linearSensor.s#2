@@ -146,33 +146,6 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="MyPOW">
-<packages>
-</packages>
-<symbols>
-<symbol name="VUSB">
-<wire x1="-1.016" y1="0" x2="1.016" y2="0" width="0.254" layer="94"/>
-<wire x1="1.016" y1="0" x2="0" y2="1.651" width="0.254" layer="94"/>
-<wire x1="0" y1="1.651" x2="-1.016" y2="0" width="0.254" layer="94"/>
-<text x="-3.048" y="2.032" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="VUSB" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="VUSB">
-<gates>
-<gate name="G$1" symbol="VUSB" x="0" y="2.54"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="supply2">
 <packages>
 </packages>
@@ -7960,15 +7933,21 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.3048" drill="0">
+<class number="0" name="default" width="0.254" drill="0">
 </class>
-<class number="1" name="power" width="0.4572" drill="0">
+<class number="1" name="power" width="0.254" drill="0">
 </class>
-<class number="2" name="VIN" width="0.4572" drill="0">
+<class number="2" name="VIN" width="0.254" drill="0">
 </class>
-<class number="3" name="fine" width="0.3048" drill="0">
+<class number="3" name="fine" width="0.254" drill="0">
 </class>
-<class number="4" name="aref" width="0.3048" drill="0">
+<class number="4" name="aref" width="0.254" drill="0">
+</class>
+<class number="5" name="USBA" width="0.254" drill="0">
+<clearance class="5" value="0.254"/>
+</class>
+<class number="6" name="USBB" width="0.254" drill="0">
+<clearance class="6" value="0.254"/>
 </class>
 </classes>
 <parts>
@@ -7978,7 +7957,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="C10" library="rcl" deviceset="R-EU_" device="M0805" value="10uF"/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
-<part name="U$7" library="MyPOW" deviceset="VUSB" device=""/>
 <part name="C12" library="rcl" deviceset="R-EU_" device="M0805" value="100nF"/>
 <part name="U$4" library="adafruit" deviceset="ATMEGA32U4" device="-AU" value="32U4"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
@@ -7987,7 +7965,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="R13" library="rcl" deviceset="R-EU_" device="M0805" value="1M"/>
 <part name="GND30" library="supply1" deviceset="GND" device=""/>
 <part name="GND31" library="supply1" deviceset="GND" device=""/>
-<part name="U$8" library="MyPOW" deviceset="VUSB" device=""/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="M0805" value="10k"/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="R15" library="resistor" deviceset="R-EU_" device="M0805" value="10k"/>
@@ -8007,6 +7984,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>
 <part name="X1" library="con-hirose" deviceset="FH12-08S-1S" device="H"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="GND1" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8028,7 +8006,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="GND14" gate="1" x="213.36" y="134.62"/>
 <instance part="C10" gate="G$1" x="261.62" y="124.46" rot="R90"/>
 <instance part="GND15" gate="1" x="261.62" y="114.3"/>
-<instance part="U$7" gate="G$1" x="223.52" y="124.46"/>
 <instance part="C12" gate="G$1" x="271.78" y="124.46" rot="MR90"/>
 <instance part="U$4" gate="G$1" x="220.98" y="45.72"/>
 <instance part="GND12" gate="1" x="149.86" y="38.1" rot="R270"/>
@@ -8037,7 +8014,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="R13" gate="G$1" x="177.8" y="38.1" rot="R90"/>
 <instance part="GND30" gate="1" x="195.58" y="10.16"/>
 <instance part="GND31" gate="1" x="139.7" y="48.26"/>
-<instance part="U$8" gate="G$1" x="177.8" y="86.36"/>
 <instance part="R3" gate="G$1" x="266.7" y="71.12" rot="R180"/>
 <instance part="GND4" gate="1" x="279.4" y="66.04"/>
 <instance part="R15" gate="G$1" x="137.16" y="101.6" rot="R90"/>
@@ -8045,7 +8021,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="X3" gate="G$1" x="170.18" y="38.1" rot="R90"/>
 <instance part="SUPPLY5" gate="G$1" x="256.54" y="132.08"/>
 <instance part="SUPPLY3" gate="G$1" x="137.16" y="111.76"/>
-<instance part="SUPPLY4" gate="G$1" x="193.04" y="81.28"/>
+<instance part="SUPPLY4" gate="G$1" x="187.96" y="78.74"/>
 <instance part="X4" gate="G$1" x="109.22" y="137.16" rot="R180"/>
 <instance part="R24" gate="G$1" x="124.46" y="137.16" rot="R180"/>
 <instance part="R31" gate="G$1" x="124.46" y="134.62" rot="R180"/>
@@ -8064,6 +8040,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="X1" gate="-7" x="312.42" y="55.88"/>
 <instance part="X1" gate="-8" x="312.42" y="53.34"/>
 <instance part="GND3" gate="1" x="302.26" y="50.8"/>
+<instance part="GND1" gate="1" x="157.48" y="139.7"/>
 </instances>
 <busses>
 </busses>
@@ -8138,6 +8115,9 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="114.3" y1="142.24" x2="142.24" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="142.24" x2="142.24" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="142.24" y1="142.24" x2="157.48" y2="142.24" width="0.1524" layer="91"/>
+<junction x="142.24" y="142.24"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="GND1"/>
@@ -8223,7 +8203,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <junction x="170.18" y="33.02"/>
 </segment>
 </net>
-<net name="RD-" class="0">
+<net name="RD-" class="6">
 <segment>
 <pinref part="U$4" gate="G$1" pin="D-"/>
 <wire x1="198.12" y1="60.96" x2="180.34" y2="60.96" width="0.1524" layer="91"/>
@@ -8235,7 +8215,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <label x="131.318" y="134.874" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="RD+" class="0">
+<net name="RD+" class="6">
 <segment>
 <pinref part="U$4" gate="G$1" pin="D+"/>
 <wire x1="198.12" y1="58.42" x2="180.34" y2="58.42" width="0.1524" layer="91"/>
@@ -8336,39 +8316,6 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <pinref part="X1" gate="-3" pin="1"/>
 <wire x1="309.88" y1="66.04" x2="302.26" y2="66.04" width="0.1524" layer="91"/>
 <label x="302.26" y="66.04" size="1.27" layer="95"/>
-</segment>
-</net>
-<net name="VUSB" class="0">
-<segment>
-<pinref part="U$7" gate="G$1" pin="VUSB"/>
-<wire x1="223.52" y1="121.92" x2="248.92" y2="121.92" width="0.1524" layer="91"/>
-<label x="238.76" y="129.54" size="1.778" layer="95"/>
-<wire x1="248.92" y1="129.54" x2="256.54" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="256.54" y1="129.54" x2="261.62" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="142.24" x2="248.92" y2="129.54" width="0.1524" layer="91"/>
-<junction x="248.92" y="129.54"/>
-<wire x1="248.92" y1="121.92" x2="248.92" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="C12" gate="G$1" pin="2"/>
-<pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="261.62" y1="129.54" x2="271.78" y2="129.54" width="0.1524" layer="91"/>
-<junction x="261.62" y="129.54"/>
-<pinref part="SUPPLY5" gate="G$1" pin="+5V/1"/>
-<junction x="256.54" y="129.54"/>
-<pinref part="CON1" gate="G$1" pin="VCC"/>
-<label x="210.82" y="144.78" size="1.778" layer="95"/>
-<wire x1="208.28" y1="142.24" x2="248.92" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U$4" gate="G$1" pin="VBUS"/>
-<wire x1="198.12" y1="83.82" x2="177.8" y2="83.82" width="0.1524" layer="91"/>
-<label x="177.8" y="83.82" size="1.778" layer="95"/>
-<pinref part="U$8" gate="G$1" pin="VUSB"/>
-</segment>
-<segment>
-<pinref part="X4" gate="G$1" pin="1"/>
-<label x="114.3" y="132.08" size="1.778" layer="95"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<wire x1="114.3" y1="132.08" x2="142.24" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D6*" class="0">
@@ -8489,14 +8436,14 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <label x="256.54" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D-USB" class="0">
+<net name="D_USB-" class="5">
 <segment>
 <pinref part="X4" gate="G$1" pin="2"/>
 <wire x1="114.3" y1="134.62" x2="119.38" y2="134.62" width="0.1524" layer="91"/>
 <pinref part="R31" gate="G$1" pin="2"/>
 </segment>
 </net>
-<net name="D+USB" class="0">
+<net name="D_USB+" class="5">
 <segment>
 <pinref part="X4" gate="G$1" pin="3"/>
 <wire x1="114.3" y1="137.16" x2="119.38" y2="137.16" width="0.1524" layer="91"/>
@@ -8535,7 +8482,7 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <wire x1="198.12" y1="73.66" x2="193.04" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="73.66" x2="193.04" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="VCC"/>
-<wire x1="193.04" y1="76.2" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="76.2" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="76.2" x2="193.04" y2="76.2" width="0.1524" layer="91"/>
 <junction x="193.04" y="76.2"/>
 <pinref part="SUPPLY4" gate="G$1" pin="+5V/1"/>
@@ -8551,6 +8498,9 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <wire x1="193.04" y1="71.12" x2="193.04" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="71.12" x2="193.04" y2="71.12" width="0.1524" layer="91"/>
 <junction x="193.04" y="71.12"/>
+<wire x1="193.04" y1="76.2" x2="193.04" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="VBUS"/>
+<wire x1="193.04" y1="83.82" x2="198.12" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="VDD"/>
@@ -8560,6 +8510,29 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <wire x1="304.8" y1="132.08" x2="292.1" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="132.08" x2="292.1" y2="129.54" width="0.1524" layer="91"/>
 <junction x="304.8" y="132.08"/>
+<label x="238.76" y="129.54" size="1.778" layer="95"/>
+<wire x1="248.92" y1="129.54" x2="256.54" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="129.54" x2="261.62" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="142.24" x2="248.92" y2="129.54" width="0.1524" layer="91"/>
+<junction x="248.92" y="129.54"/>
+<wire x1="248.92" y1="121.92" x2="248.92" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<pinref part="C10" gate="G$1" pin="2"/>
+<wire x1="261.62" y1="129.54" x2="271.78" y2="129.54" width="0.1524" layer="91"/>
+<junction x="261.62" y="129.54"/>
+<pinref part="SUPPLY5" gate="G$1" pin="+5V/1"/>
+<junction x="256.54" y="129.54"/>
+<pinref part="CON1" gate="G$1" pin="VCC"/>
+<label x="210.82" y="144.78" size="1.778" layer="95"/>
+<wire x1="208.28" y1="142.24" x2="248.92" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="132.08" x2="271.78" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="271.78" y1="132.08" x2="271.78" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="X4" gate="G$1" pin="1"/>
+<label x="114.3" y="132.08" size="1.778" layer="95"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="114.3" y1="132.08" x2="142.24" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="121.92" x2="142.24" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="142.24" y1="121.92" x2="142.24" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="D8*" class="0">
