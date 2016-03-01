@@ -8045,12 +8045,12 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <instance part="U$8" gate="G$1" x="177.8" y="86.36"/>
 <instance part="R3" gate="G$1" x="266.7" y="71.12" rot="R180"/>
 <instance part="GND4" gate="1" x="279.4" y="66.04"/>
-<instance part="R15" gate="G$1" x="137.16" y="101.6" rot="R90"/>
+<instance part="R15" gate="G$1" x="187.96" y="99.06" rot="R90"/>
 <instance part="C3" gate="G$1" x="144.78" y="53.34" rot="R90"/>
 <instance part="X3" gate="G$1" x="170.18" y="38.1" rot="R90"/>
 <instance part="SUPPLY5" gate="G$1" x="256.54" y="132.08"/>
-<instance part="SUPPLY3" gate="G$1" x="137.16" y="111.76"/>
-<instance part="SUPPLY4" gate="G$1" x="193.04" y="81.28"/>
+<instance part="SUPPLY3" gate="G$1" x="187.96" y="109.22"/>
+<instance part="SUPPLY4" gate="G$1" x="187.96" y="78.74"/>
 <instance part="X4" gate="G$1" x="109.22" y="137.16" rot="R180"/>
 <instance part="R24" gate="G$1" x="124.46" y="137.16" rot="R180"/>
 <instance part="R31" gate="G$1" x="124.46" y="134.62" rot="R180"/>
@@ -8512,14 +8512,14 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <segment>
 <pinref part="R15" gate="G$1" pin="2"/>
 <pinref part="SUPPLY3" gate="G$1" pin="+5V/1"/>
-<wire x1="137.16" y1="109.22" x2="137.16" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="106.68" x2="187.96" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="VCC1"/>
 <wire x1="198.12" y1="73.66" x2="193.04" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="73.66" x2="193.04" y2="76.2" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="VCC"/>
-<wire x1="193.04" y1="76.2" x2="193.04" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="76.2" x2="187.96" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="76.2" x2="193.04" y2="76.2" width="0.1524" layer="91"/>
 <junction x="193.04" y="76.2"/>
 <pinref part="SUPPLY4" gate="G$1" pin="+5V/1"/>
@@ -8584,10 +8584,10 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <net name="RESET" class="0">
 <segment>
 <pinref part="U$4" gate="G$1" pin="/RESET"/>
-<wire x1="137.16" y1="88.9" x2="198.12" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="88.9" x2="198.12" y2="88.9" width="0.1524" layer="91"/>
 <label x="187.96" y="88.9" size="1.778" layer="95"/>
 <pinref part="R15" gate="G$1" pin="1"/>
-<wire x1="137.16" y1="96.52" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="93.98" x2="187.96" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="CON1" gate="G$1" pin="RESET"/>
