@@ -12116,7 +12116,6 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <text x="332.74" y="190.5" size="0.508" layer="97">Load sharing:
 http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <text x="195.58" y="152.4" size="1.778" layer="91">Solar pannel</text>
-<text x="86.36" y="60.96" size="5.08" layer="91">RGB UV</text>
 </plain>
 <instances>
 <instance part="CON_ISP" gate="G$1" x="119.38" y="254"/>
