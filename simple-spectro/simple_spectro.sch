@@ -5466,21 +5466,6 @@ Source: YH-55-10.pdf</description>
 <rectangle x1="4.445" y1="-1.905" x2="8.255" y2="1.905" layer="42"/>
 <rectangle x1="-4.445" y1="0" x2="4.445" y2="6.985" layer="43"/>
 </package>
-<package name="DC_BARREL">
-<pad name="P$1" x="0" y="13.7" drill="3.6" diameter="4.5" shape="octagon"/>
-<pad name="P$2" x="0" y="7.7" drill="3.2" diameter="4.064" shape="octagon" rot="R180" thermals="no"/>
-<pad name="P$3" x="4.7" y="10.7" drill="3.2" diameter="4.064" shape="octagon" rot="R270"/>
-<wire x1="4.7" y1="7.62" x2="4.7" y2="0" width="0.6096" layer="21"/>
-<wire x1="4.7" y1="0" x2="-4.7" y2="0" width="0.6096" layer="21"/>
-<wire x1="-5.08" y1="0" x2="-5.08" y2="15.24" width="0.6096" layer="21"/>
-<wire x1="-5.08" y1="15.24" x2="-2.54" y2="15.24" width="0.6096" layer="21"/>
-<wire x1="2.54" y1="15.24" x2="4.7" y2="15.24" width="0.6096" layer="21"/>
-<wire x1="4.7" y1="15.24" x2="4.7" y2="13.462" width="0.6096" layer="21"/>
-<rectangle x1="-6.35" y1="-1.27" x2="6.35" y2="16.51" layer="43"/>
-<text x="-1.905" y="3.81" size="1.27" layer="21">GND</text>
-<text x="8.255" y="8.89" size="1.27" layer="21" rot="R90">GND</text>
-<text x="-4.445" y="10.795" size="1.27" layer="21">V+</text>
-</package>
 <package name="TSL237">
 <text x="-4.953" y="-1.016" size="0.4318" layer="25">&gt;Name</text>
 <text x="-4.953" y="-1.778" size="0.4318" layer="27">TSL237</text>
@@ -5710,13 +5695,6 @@ Source: YH-55-10.pdf</description>
 <pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" swaplevel="1"/>
 <pin name="5" x="-2.54" y="-5.08" visible="pad" length="short" swaplevel="1"/>
 <pin name="6" x="-2.54" y="-7.62" visible="pad" length="short" swaplevel="1"/>
-</symbol>
-<symbol name="JACK_PJ-063BH">
-<description>Power JAck 8A PJ-063BH</description>
-<circle x="0" y="0" radius="5.08" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.79605" width="0.254" layer="94"/>
-<pin name="GND" x="-10.16" y="0" length="middle"/>
-<pin name="V+" x="0" y="6.858" length="middle" rot="R270"/>
 </symbol>
 <symbol name="TSL237">
 <circle x="-7.62" y="12.7" radius="5.6796125" width="0.254" layer="94"/>
@@ -6029,22 +6007,6 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <connect gate="G$1" pin="4" pad="I/O"/>
 <connect gate="G$1" pin="5" pad="PWM"/>
 <connect gate="G$1" pin="6" pad="GND"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="JACK_DC_BARREL">
-<gates>
-<gate name="G$1" symbol="JACK_PJ-063BH" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DC_BARREL">
-<connects>
-<connect gate="G$1" pin="GND" pad="P$2"/>
-<connect gate="G$1" pin="V+" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13495,19 +13457,19 @@ Source: www.kingbright.com</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.2032" drill="0">
+<class number="0" name="default" width="0.4064" drill="0">
 <clearance class="0" value="0.25"/>
 </class>
-<class number="1" name="power" width="0.2032" drill="0.3048">
+<class number="1" name="power" width="0.4064" drill="0.3048">
 <clearance class="1" value="0.25"/>
 </class>
-<class number="2" name="VIN" width="0.4572" drill="0">
+<class number="2" name="VIN" width="0.4064" drill="0">
 <clearance class="2" value="0.25"/>
 </class>
-<class number="3" name="fine" width="0.254" drill="0">
+<class number="3" name="fine" width="0.4064" drill="0">
 <clearance class="3" value="0.25"/>
 </class>
-<class number="4" name="aref" width="0.3556" drill="0">
+<class number="4" name="aref" width="0.4064" drill="0">
 <clearance class="4" value="0.25"/>
 </class>
 </classes>
@@ -13575,7 +13537,7 @@ Source: www.kingbright.com</description>
 <part name="CU7" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="CU8" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
-<part name="IC1" library="linear" deviceset="MCP1703" device="DB"/>
+<part name="IC1" library="linear" deviceset="MCP1703" device="DB" value="MCP1703-33"/>
 <part name="SUPPLY3" library="supply1" deviceset="VDD" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
@@ -13588,12 +13550,6 @@ Source: www.kingbright.com</description>
 <part name="U$2" library="MyPOW" deviceset="VUSB" device=""/>
 <part name="D4" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
 <part name="D6" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
-<part name="CON2" library="lpatiny" deviceset="JACK_DC_BARREL" device=""/>
-<part name="U$6" library="microbuilder" deviceset="GND" device=""/>
-<part name="Q2" library="dp_devices" deviceset="TRANSISTOR_FET_TSM2301CX" device="" value="DMP1045U"/>
-<part name="P+2" library="supply1" deviceset="VCC" device=""/>
-<part name="R6" library="microbuilder" deviceset="RESISTOR" device="0805" value="470"/>
-<part name="R8" library="microbuilder" deviceset="RESISTOR" device="0805" value="470"/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="L1" library="led" deviceset="LED" device="3MM" value="UV"/>
@@ -13604,9 +13560,10 @@ Source: www.kingbright.com</description>
 <part name="SUPPLY1" library="supply1" deviceset="VCC" device=""/>
 <part name="D7" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
 <part name="D8" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
-<part name="D1" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
 <part name="CU1" library="rcl" deviceset="C-EU" device="C0805" value="100nF"/>
 <part name="RK3" library="resistor" deviceset="R-EU_" device="M0805" value="10k"/>
+<part name="IC2" library="linear" deviceset="MCP1703" device="DB" value="MCP1703-50"/>
+<part name="U$4" library="microbuilder" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13650,7 +13607,6 @@ Source: www.kingbright.com</description>
 <text x="251.46" y="170.18" size="1.778" layer="97">MAX 6V !</text>
 <text x="332.74" y="190.5" size="0.508" layer="97">Load sharing:
 http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
-<text x="205.74" y="215.9" size="1.778" layer="91">Solar pannel</text>
 <text x="86.36" y="60.96" size="5.08" layer="91">RGB UV</text>
 <text x="218.44" y="195.58" size="1.778" layer="91">Over voltage protection
 * Consumption ?
@@ -13747,13 +13703,7 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <instance part="SUPPLY4" gate="G$1" x="342.9" y="165.1" rot="R180"/>
 <instance part="U$2" gate="G$1" x="200.66" y="162.56"/>
 <instance part="D4" gate="G$1" x="215.9" y="160.02"/>
-<instance part="D6" gate="G$1" x="215.9" y="177.8"/>
-<instance part="CON2" gate="G$1" x="213.36" y="226.06" rot="MR90"/>
-<instance part="U$6" gate="G$1" x="213.36" y="210.82"/>
-<instance part="Q2" gate="G$1" x="226.06" y="172.72" rot="MR270"/>
-<instance part="P+2" gate="VCC" x="248.92" y="193.04"/>
-<instance part="R6" gate="G$1" x="236.22" y="187.96"/>
-<instance part="R8" gate="G$1" x="220.98" y="187.96"/>
+<instance part="D6" gate="G$1" x="210.82" y="182.88"/>
 <instance part="R9" gate="G$1" x="99.06" y="17.78" rot="MR180"/>
 <instance part="GND9" gate="1" x="119.38" y="17.78" smashed="yes" rot="R90">
 <attribute name="VALUE" x="121.285" y="15.875" size="1.27" layer="96" rot="R90"/>
@@ -13766,9 +13716,10 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <instance part="SUPPLY1" gate="VCC" x="104.14" y="236.22"/>
 <instance part="D7" gate="G$1" x="215.9" y="149.86"/>
 <instance part="D8" gate="G$1" x="215.9" y="139.7"/>
-<instance part="D1" gate="G$1" x="215.9" y="170.18"/>
 <instance part="CU1" gate="G$1" x="38.1" y="35.56"/>
 <instance part="RK3" gate="G$1" x="58.42" y="185.42" rot="R180"/>
+<instance part="IC2" gate="G$1" x="226.06" y="182.88"/>
+<instance part="U$4" gate="G$1" x="226.06" y="170.18"/>
 </instances>
 <busses>
 </busses>
@@ -13939,11 +13890,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <pinref part="J2" gate="G$1" pin="4"/>
 </segment>
 <segment>
-<pinref part="CON2" gate="G$1" pin="GND"/>
-<pinref part="U$6" gate="G$1" pin="GND"/>
-<wire x1="213.36" y1="215.9" x2="213.36" y2="213.36" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <wire x1="114.3" y1="17.78" x2="116.84" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <junction x="116.84" y="17.78"/>
@@ -13953,6 +13899,11 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <pinref part="U$7" gate="G$1" pin="GND"/>
 <wire x1="215.9" y1="251.46" x2="215.9" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="U$8" gate="G$1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="GND"/>
+<pinref part="IC2" gate="G$1" pin="GND"/>
+<wire x1="226.06" y1="172.72" x2="226.06" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCK" class="0">
@@ -14529,12 +14480,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="38.1" y1="43.18" x2="30.48" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="241.3" y1="187.96" x2="248.92" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="248.92" y1="187.96" x2="248.92" y2="190.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U$7" gate="G$1" pin="VDD"/>
 <wire x1="215.9" y1="266.7" x2="215.9" y2="271.78" width="0.1524" layer="91"/>
 <pinref part="SUPPLY2" gate="VCC" pin="VCC"/>
@@ -14618,40 +14563,17 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="335.28" y1="180.34" x2="335.28" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="187.96" x2="342.9" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="D5" gate="G$1" pin="A"/>
-<pinref part="Q2" gate="G$1" pin="S"/>
-<wire x1="231.14" y1="170.18" x2="233.68" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="D4" gate="G$1" pin="C"/>
 <wire x1="218.44" y1="160.02" x2="233.68" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="160.02" x2="233.68" y2="170.18" width="0.1524" layer="91"/>
-<junction x="233.68" y="170.18"/>
 <pinref part="D7" gate="G$1" pin="C"/>
 <wire x1="218.44" y1="149.86" x2="233.68" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="149.86" x2="233.68" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="D8" gate="G$1" pin="C"/>
 <wire x1="218.44" y1="139.7" x2="233.68" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="139.7" x2="233.68" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="EXT-VCC" class="0">
-<segment>
-<wire x1="219.964" y1="226.06" x2="236.22" y2="226.06" width="0.1524" layer="91"/>
-<label x="226.06" y="226.06" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="213.36" y1="170.18" x2="200.66" y2="170.18" width="0.1524" layer="91"/>
-<label x="200.66" y="170.18" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="Q2" gate="G$1" pin="G"/>
-<wire x1="228.6" y1="175.26" x2="228.6" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="226.06" y1="187.96" x2="228.6" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="228.6" y1="187.96" x2="231.14" y2="187.96" width="0.1524" layer="91"/>
-<junction x="228.6" y="187.96"/>
+<pinref part="IC2" gate="G$1" pin="VO"/>
+<wire x1="236.22" y1="182.88" x2="236.22" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -14681,25 +14603,15 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 </segment>
 <segment>
 <pinref part="D6" gate="G$1" pin="A"/>
-<wire x1="200.66" y1="177.8" x2="213.36" y2="177.8" width="0.1524" layer="91"/>
-<label x="200.66" y="177.8" size="1.778" layer="95"/>
+<wire x1="200.66" y1="182.88" x2="208.28" y2="182.88" width="0.1524" layer="91"/>
+<label x="200.66" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HIGH-VCC" class="0">
 <segment>
-<wire x1="220.98" y1="177.8" x2="220.98" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="D6" gate="G$1" pin="C"/>
-<wire x1="218.44" y1="177.8" x2="220.98" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="Q2" gate="G$1" pin="D"/>
-<wire x1="220.98" y1="177.8" x2="220.98" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="R8" gate="G$1" pin="1"/>
-<wire x1="215.9" y1="187.96" x2="210.82" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="220.98" y1="182.88" x2="210.82" y2="182.88" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="182.88" x2="210.82" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="220.98" y1="170.18" x2="218.44" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="210.82" y1="187.96" x2="200.66" y2="187.96" width="0.1524" layer="91"/>
-<label x="200.66" y="187.96" size="1.778" layer="95"/>
+<wire x1="213.36" y1="182.88" x2="215.9" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="VI"/>
 </segment>
 </net>
 </nets>
