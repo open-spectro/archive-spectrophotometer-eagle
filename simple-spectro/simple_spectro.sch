@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="7.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -13549,7 +13549,6 @@ Source: www.kingbright.com</description>
 <part name="SUPPLY4" library="supply1" deviceset="VDD" device=""/>
 <part name="U$2" library="MyPOW" deviceset="VUSB" device=""/>
 <part name="D4" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
-<part name="D6" library="lpatiny" deviceset="1N581*" device="D1206" value="1N581D1206"/>
 <part name="R9" library="rcl" deviceset="R-EU_" device="R0805" value="1k"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="L1" library="led" deviceset="LED" device="3MM" value="UV"/>
@@ -13703,7 +13702,6 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <instance part="SUPPLY4" gate="G$1" x="342.9" y="165.1" rot="R180"/>
 <instance part="U$2" gate="G$1" x="200.66" y="162.56"/>
 <instance part="D4" gate="G$1" x="215.9" y="160.02"/>
-<instance part="D6" gate="G$1" x="210.82" y="182.88"/>
 <instance part="R9" gate="G$1" x="99.06" y="17.78" rot="MR180"/>
 <instance part="GND9" gate="1" x="119.38" y="17.78" smashed="yes" rot="R90">
 <attribute name="VALUE" x="121.285" y="15.875" size="1.27" layer="96" rot="R90"/>
@@ -14602,16 +14600,9 @@ http://blog.zakkemble.co.uk/a-lithium-battery-charger-with-load-sharing/</text>
 <wire x1="81.28" y1="259.08" x2="63.5" y2="259.08" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="D6" gate="G$1" pin="A"/>
-<wire x1="200.66" y1="182.88" x2="208.28" y2="182.88" width="0.1524" layer="91"/>
-<label x="200.66" y="180.34" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="HIGH-VCC" class="0">
-<segment>
-<pinref part="D6" gate="G$1" pin="C"/>
-<wire x1="213.36" y1="182.88" x2="215.9" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="VI"/>
+<wire x1="200.66" y1="182.88" x2="215.9" y2="182.88" width="0.1524" layer="91"/>
+<label x="200.66" y="180.34" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
